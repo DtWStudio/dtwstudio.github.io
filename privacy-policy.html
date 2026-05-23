@@ -5,87 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad y Términos - MRU Física Fácil</title>
     <style>
-        /* Variables de diseño para consistencia de color */
+        /* Variables de diseño de alta fidelidad */
         :root {
-            --primary: #1e3a8a;
-            --primary-light: #3b82f6;
+            --primary-dark: #0f172a;
+            --brand-color: #1e40af;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
             --text-main: #334155;
             --text-muted: #64748b;
-            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --bg-base: #f8fafc;
         }
 
-        /* Estilos Base */
+        /* Reset y Configuración Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body { 
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-            line-height: 1.7; 
+            line-height: 1.75; 
             color: var(--text-main); 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 50px 20px; 
-            background: var(--bg-gradient);
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(243, 244, 246, 1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, rgba(224, 231, 255, 0.5) 0, transparent 50%);
             background-attachment: fixed;
+            padding: 40px 20px;
             -webkit-font-smoothing: antialiased;
         }
         
-        /* Contenedor Principal o Layout */
         .wrapper {
+            max-width: 820px;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 24px;
         }
 
-        /* Cabecera Estilo Hero */
+        /* Cabecera Estilo Glassmorphism Premium */
         .hero-header {
             background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-            padding: 45px 40px;
-            border-radius: 24px;
+            padding: 50px 40px;
+            border-radius: 20px;
             color: #ffffff;
-            box-shadow: 0 20px 25px -5px rgba(30, 58, 138, 0.15);
+            box-shadow: 0 20px 30px -10px rgba(30, 58, 138, 0.3);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Sutil reflejo tecnológico de fondo */
+        .hero-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 60%);
+            pointer-events: none;
         }
 
         .hero-header h1 { 
-            color: #ffffff; 
             font-size: 2.2rem;
             font-weight: 800;
             letter-spacing: -0.03em;
-            margin: 0 0 12px 0;
+            margin-bottom: 16px;
             line-height: 1.2;
+            position: relative;
+            z-index: 1;
         }
 
         .date { 
             font-style: normal; 
-            color: #93c5fd; 
-            font-size: 0.95rem;
-            font-weight: 500;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 6px 16px;
-            border-radius: 30px;
+            color: #bfdbfe; 
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 6px 18px;
+            border-radius: 50px;
             display: inline-block;
+            backdrop-filter: blur(4px);
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.02em;
         }
 
-        /* Bloques de Contenido (Cards) */
+        /* Tarjetas de Contenido Elegantes */
         .section-card { 
-            background: var(--card-bg); 
-            padding: 45px; 
-            border-radius: 24px; 
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            background: #ffffff; 
+            padding: 50px; 
+            border-radius: 20px; 
+            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 10px 20px -3px rgba(15, 23, 42, 0.05);
+            border: 1px solid rgba(241, 245, 249, 0.8);
         }
 
-        /* Títulos de sección internos */
+        /* Tipografía Avanzada */
         h2 { 
-            color: var(--primary); 
-            font-size: 1.4rem;
+            color: var(--primary-dark); 
+            font-size: 1.35rem;
             font-weight: 700;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f1f5f9;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f1f5f9;
+            letter-spacing: -0.01em;
+        }
+
+        .section-card > p:first-of-type {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin-bottom: 24px;
         }
 
         h2:first-of-type {
@@ -93,28 +126,38 @@
         }
 
         .terms-title {
-            color: #0f172a;
+            color: var(--primary-dark);
             font-size: 1.8rem;
             font-weight: 800;
-            margin-top: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 8px;
             letter-spacing: -0.02em;
         }
 
-        /* Elementos de Texto */
-        p, li {
+        p {
+            margin-bottom: 16px;
             color: #475569;
-            font-size: 1.05rem;
         }
 
+        /* Listas limpias y refinadas */
         ul { 
-            margin-bottom: 25px; 
-            padding-left: 20px;
+            margin-bottom: 24px; 
+            list-style: none;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #475569;
             position: relative;
+            padding-left: 20px;
+        }
+
+        /* Viñeta de guion moderna en lugar del punto negro feo */
+        li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
         }
 
         strong {
@@ -122,66 +165,63 @@
             font-weight: 600;
         }
 
-        /* Caja Destacada: Eliminación de Datos */
+        /* Caja de Eliminación de Datos Ultra Destacada */
         .deletion-box { 
             border: 1px solid #e2e8f0; 
             padding: 30px; 
             border-radius: 16px; 
-            margin-top: 30px; 
+            margin: 32px 0; 
             background: #f8fafc; 
-            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
-            border-left: 5px solid var(--primary-light);
-            transition: transform 0.2s ease;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.04);
         }
 
-        .deletion-box:hover {
-            transform: translateY(-2px);
+        .deletion-box p {
+            color: #334155;
         }
 
-        .deletion-box p:first-child {
-            margin-top: 0;
+        .deletion-box ul {
+            margin-bottom: 0;
         }
 
-        /* Bloque de Contacto */
+        .deletion-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Botón de Contacto Moderno */
         .contact { 
-            background: #eff6ff; 
-            color: #1e40af;
-            padding: 20px 25px; 
-            border-radius: 14px; 
+            background: var(--accent-light); 
+            color: var(--brand-color);
+            padding: 14px 20px; 
+            border-radius: 10px; 
             font-weight: 600;
-            border: 1px dashed #bfdbfe;
-            margin-top: 30px;
             display: inline-block;
+            margin-top: 16px;
+            border: 1px solid #dbeafe;
+            font-size: 0.95rem;
         }
 
-        /* Separador sutil */
-        hr {
-            border: 0;
-            height: 1px;
-            background: #e2e8f0;
-            margin: 20px 0;
-        }
-
-        /* Adaptación para pantallas pequeñas (Celulares) */
-        @media (max-width: 600px) {
-            body { padding: 20px 10px; }
-            .hero-header { padding: 35px 20px; }
-            .hero-header h1 { font-size: 1.7rem; }
-            .section-card { padding: 25px; border-radius: 16px; }
+        /* Ajuste de diseño adaptativo para pantallas móviles */
+        @media (max-width: 640px) {
+            body { padding: 16px 12px; }
+            .hero-header { padding: 40px 20px; border-radius: 16px; }
+            .hero-header h1 { font-size: 1.75rem; }
+            .section-card { padding: 30px 20px; border-radius: 16px; }
             h2 { font-size: 1.2rem; }
+            .terms-title { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 <div class="wrapper">
 
-    <!-- CABECERA -->
+    <!-- ENCABEZADO -->
     <header class="hero-header">
         <h1>Política de Privacidad – MRU Física Fácil</h1>
         <div class="date">Última actualización: 17 de marzo de 2026</div>
     </header>
 
-    <!-- BLOQUE 1: POLÍTICA DE PRIVACIDAD -->
+    <!-- POLÍTICA DE PRIVACIDAD -->
     <main class="section-card">
         <p>La presente Política de Privacidad describe cómo <strong>MRU Física Fácil</strong> recopila, utiliza y protege la información de los usuarios. Al utilizar esta aplicación, aceptas las prácticas descritas aquí.</p>
 
@@ -225,7 +265,7 @@
         <p class="contact">Para dudas o solicitudes sobre tus datos: developer.dtw@gmail.com</p>
     </main>
 
-    <!-- BLOQUE 2: TÉRMINOS Y CONDICIONES -->
+    <!-- TÉRMINOS Y CONDICIONES -->
     <section class="section-card">
         <h1 class="terms-title">Términos y Condiciones</h1>
         
@@ -235,7 +275,7 @@
         <h2>2. Propiedad Intelectual</h2>
         <p>Todo el contenido, diseño y código de <strong>MRU Física Fácil</strong> son propiedad de <strong>DtW Studio</strong>.</p>
 
-        <h2>3. Legislación</h2>
+        <h2>3. Legislation</h2>
         <p>Estos términos se rigen por las leyes de la <strong>República Dominicana</strong>.</p>
     </section>
 
