@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad y Términos - MRU Física Fácil</title>
     <style>
-        /* Variables de diseño de alta fidelidad */
+        /* Variables de diseño optimizadas con contraste real */
         :root {
             --primary-dark: #0f172a;
-            --brand-color: #1e40af;
-            --accent: #2563eb;
-            --accent-light: #eff6ff;
+            --brand-color: #1e3a8a;      /* Azul principal */
+            --accent: #d97706;           /* Color Secundario: Ámbar/Naranja para contraste */
+            --accent-light: #fffbeb;     /* Fondo suave para la caja de contacto */
             --text-main: #334155;
             --text-muted: #64748b;
             --border-color: #e2e8f0;
@@ -31,7 +31,7 @@
             background-color: var(--bg-base);
             background-image: 
                 radial-gradient(at 0% 0%, rgba(243, 244, 246, 1) 0, transparent 50%), 
-                radial-gradient(at 100% 0%, rgba(224, 231, 255, 0.5) 0, transparent 50%);
+                radial-gradient(at 100% 0%, rgba(224, 231, 255, 0.3) 0, transparent 50%);
             background-attachment: fixed;
             padding: 40px 20px;
             -webkit-font-smoothing: antialiased;
@@ -45,19 +45,18 @@
             gap: 24px;
         }
 
-        /* Cabecera Estilo Glassmorphism Premium */
+        /* Cabecera Estilo Premium */
         .hero-header {
             background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
             padding: 50px 40px;
             border-radius: 20px;
             color: #ffffff;
-            box-shadow: 0 20px 30px -10px rgba(30, 58, 138, 0.3);
+            box-shadow: 0 20px 30px -10px rgba(30, 58, 138, 0.25);
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        /* Sutil reflejo tecnológico de fondo */
         .hero-header::before {
             content: '';
             position: absolute;
@@ -65,7 +64,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, transparent 60%);
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.15) 0%, transparent 60%);
             pointer-events: none;
         }
 
@@ -81,7 +80,7 @@
 
         .date { 
             font-style: normal; 
-            color: #bfdbfe; 
+            color: #fef3c7; 
             font-size: 0.9rem;
             font-weight: 600;
             background: rgba(255, 255, 255, 0.12);
@@ -94,18 +93,18 @@
             letter-spacing: 0.02em;
         }
 
-        /* Tarjetas de Contenido Elegantes */
+        /* Tarjetas de Contenido */
         .section-card { 
             background: #ffffff; 
             padding: 50px; 
             border-radius: 20px; 
-            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 10px 20px -3px rgba(15, 23, 42, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02), 0 10px 20px -3px rgba(15, 23, 42, 0.04);
             border: 1px solid rgba(241, 245, 249, 0.8);
         }
 
-        /* Tipografía Avanzada */
+        /* Títulos */
         h2 { 
-            color: var(--primary-dark); 
+            color: var(--brand-color); 
             font-size: 1.35rem;
             font-weight: 700;
             margin-top: 40px;
@@ -138,7 +137,7 @@
             color: #475569;
         }
 
-        /* Listas limpias y refinadas */
+        /* Listas con viñeta secundaria de contraste */
         ul { 
             margin-bottom: 24px; 
             list-style: none;
@@ -151,12 +150,11 @@
             padding-left: 20px;
         }
 
-        /* Viñeta de guion moderna en lugar del punto negro feo */
         li::before {
             content: "—";
             position: absolute;
             left: 0;
-            color: var(--accent);
+            color: var(--accent); /* Ahora el guion resalta en naranja suave */
             font-weight: bold;
         }
 
@@ -165,15 +163,15 @@
             font-weight: 600;
         }
 
-        /* Caja de Eliminación de Datos Ultra Destacada */
+        /* Caja de Eliminación de Datos */
         .deletion-box { 
             border: 1px solid #e2e8f0; 
             padding: 30px; 
             border-radius: 16px; 
             margin: 32px 0; 
-            background: #f8fafc; 
-            border-left: 4px solid var(--accent);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.04);
+            background: #fafafa; 
+            border-left: 4px solid var(--accent); /* Resalta sutilmente la advertencia */
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
         }
 
         .deletion-box p {
@@ -188,20 +186,20 @@
             margin-bottom: 0;
         }
 
-        /* Botón de Contacto Moderno */
+        /* Botón de Contacto Destacado */
         .contact { 
             background: var(--accent-light); 
-            color: var(--brand-color);
+            color: #b45309;
             padding: 14px 20px; 
             border-radius: 10px; 
             font-weight: 600;
             display: inline-block;
             margin-top: 16px;
-            border: 1px solid #dbeafe;
+            border: 1px solid #fef3c7;
             font-size: 0.95rem;
         }
 
-        /* Ajuste de diseño adaptativo para pantallas móviles */
+        /* Diseño móvil */
         @media (max-width: 640px) {
             body { padding: 16px 12px; }
             .hero-header { padding: 40px 20px; border-radius: 16px; }
@@ -275,7 +273,7 @@
         <h2>2. Propiedad Intelectual</h2>
         <p>Todo el contenido, diseño y código de <strong>MRU Física Fácil</strong> son propiedad de <strong>DtW Studio</strong>.</p>
 
-        <h2>3. Legislation</h2>
+        <h2>3. Legislación</h2>
         <p>Estos términos se rigen por las leyes de la <strong>República Dominicana</strong>.</p>
     </section>
 
