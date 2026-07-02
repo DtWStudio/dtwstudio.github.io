@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DtW Studio - Sitios Oficial</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --text-dim: #8b949e;
+            --accent-color: #58a6ff;
+            --accent-hover: #1f6feb;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+            box-sizing: border-box;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .app-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .app-card p {
+            margin: 0 0 1.5rem 0;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .app-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(88, 166, 255, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        footer a {
+            color: var(--text-dim);
+            text-decoration: underline;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DtW Studio</h1>
+        <p>Creando herramientas y aplicaciones educativas de alta calidad</p>
+    </header>
+
+    <main>
+        <h2 class="section-title">Nuestras Aplicaciones</h2>
+        <div class="apps-grid">
+            
+            <!-- App: MRUV Física Fácil -->
+            <div class="app-card">
+                <h3>MRUV Física Fácil</h3>
+                <p>Resuelve problemas de Movimiento Rectilíneo Uniformemente Variado de forma rápida y sencilla. Incluye herramientas de cálculo vectorial en 3D.</p>
+                <div class="app-links">
+                    <a href="mruv-privacy-policy.html" class="btn btn-secondary">Privacidad</a>
+                </div>
+            </div>
+
+            <!-- App: MRU Física Fácil -->
+            <div class="app-card">
+                <h3>MRU Física Fácil</h3>
+                <p>Tu compañero ideal para comprender el Movimiento Rectilíneo Uniforme. Diseñado para estudiantes de física y cinemática.</p>
+                <div class="app-links">
+                    <a href="privacy-policy.html" class="btn btn-secondary">Privacidad</a>
+                </div>
+            </div>
+
+            <!-- App: Encuentra la lógica -->
+            <div class="app-card">
+                <h3>Encuentra la lógica</h3>
+                <p>Desafía tu mente y mejora tus habilidades cognitivas resolviendo acertijos lógicos y patrones matemáticos complejos.</p>
+            </div>
+
+            <!-- App: Porcenteando -->
+            <div class="app-card">
+                <h3>Porcenteando</h3>
+                <p>La forma más rápida y ágil de calcular porcentajes, descuentos y variaciones numéricas en tu día a día.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DtW Studio. Todos los derechos reservados.</p>
+        <p>
+            <a href="privacy-policy.html">Política de Privacidad General</a> | 
+            <a href="app-ads.txt">app-ads.txt</a>
+        </p>
+    </footer>
+
+</body>
+</html>
