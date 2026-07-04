@@ -3,158 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DtW Studio - Sitio Oficial</title>
+    <title>DtW Studio - Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
     <style>
+        /* 1. Variables de Diseño (Temas y Colores Premium) */
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-color: #c9d1d9;
-            --text-dim: #8b949e;
-            --accent-color: #58a6ff;
-            --accent-hover: #1f6feb;
-            --border-color: #30363d;
-            --play-store-color: #00a174;
-            --play-store-hover: #008761;
+            --bg-color: #0f172a;       /* Fondo oscuro profundo (estilo Tailwind Slate) */
+            --card-bg: #1e293b;        /* Fondo de tarjetas ligeramente más claro */
+            --text-main: #f8fafc;      /* Texto principal brillante */
+            --text-muted: #94a3b8;     /* Texto secundario suavizado */
+            --accent-color: #38bdf8;   /* Azul brillante/Celeste para acentos y botones */
+            --accent-hover: #0ea5e9;   /* Efecto hover del botón */
+            --border-color: #334155;   /* Bordes sutiles */
+            --radius: 12px;            /* Bordes redondeados modernos */
+            --transition: all 0.3s ease;
         }
 
+        /* 2. Estilos Globales y Reset */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-main);
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            line-height: 1.6;
         }
 
+        /* 3. Header / Encabezado */
         header {
-            background-color: var(--card-bg);
+            background-color: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px); /* Efecto vidrio esmerilado moderno */
             border-bottom: 1px solid var(--border-color);
-            padding: 2.5rem 1rem;
+            padding: 3rem 1.5rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         header h1 {
-            margin: 0;
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
-            color: #fff;
-            letter-spacing: 0.5px;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to right, #ffffff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         header p {
-            margin: 0.5rem 0 0 0;
-            color: var(--text-dim);
+            color: var(--text-muted);
             font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
+        /* 4. Contenedor Principal (Grid Layout) */
         main {
             flex: 1;
-            max-width: 900px;
+            max-width: 1000px;
             width: 100%;
             margin: 0 auto;
-            padding: 3rem 1rem;
+            padding: 3rem 1.5rem;
             box-sizing: border-box;
         }
 
         .section-title {
-            font-size: 1.8rem;
-            color: #fff;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.75rem;
         }
 
         .apps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
         }
 
+        /* 5. Tarjetas de Aplicación (Cards) */
         .app-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 1.8rem;
+            border-radius: var(--radius);
+            padding: 2rem;
             display: flex;
             flex-direction: column;
-            transition: transform 0.2s, border-color 0.2s;
+            justify-content: space-between;
+            transition: var(--transition);
         }
 
         .app-card:hover {
-            transform: translateY(-2px);
+            transform: translateY(-5px); /* Pequeño salto flotante al pasar el mouse */
             border-color: var(--accent-color);
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.1);
         }
 
-        .app-card h3 {
+        .app-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.35rem;
             margin: 0 0 0.75rem 0;
-            font-size: 1.4rem;
-            color: #fff;
         }
 
-        .app-card p {
-            margin: 0 0 1.8rem 0;
-            color: var(--text-dim);
+        .app-description {
+            color: var(--text-muted);
             font-size: 0.95rem;
-            line-height: 1.5;
-            flex: 1;
+            margin-bottom: 1.5rem;
         }
 
-        .app-links {
+        /* Detalles técnicos como fuentes mono */
+        .app-tech {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            background-color: rgba(56, 189, 248, 0.08);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 6. Botones y Acciones */
+        .card-actions {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
         }
 
         .btn {
-            display: inline-block;
-            text-decoration: none;
-            padding: 0.6rem 1rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
             font-weight: 500;
-            text-align: center;
-            transition: background-color 0.2s, border-color 0.2s;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
         }
 
-        .btn-play-store {
-            background-color: var(--play-store-color);
-            color: #ffffff;
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #0f172a; /* Texto oscuro para buen contraste */
+            font-weight: 600;
         }
 
-        .btn-play-store:hover {
-            background-color: var(--play-store-hover);
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
         }
 
         .btn-secondary {
             background-color: transparent;
-            color: var(--text-color);
+            color: var(--text-main);
             border: 1px solid var(--border-color);
         }
 
         .btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.05);
-            border-color: var(--text-dim);
+            border-color: var(--text-muted);
         }
 
+        /* 7. Footer / Pie de página */
         footer {
-            background-color: var(--card-bg);
+            background-color: rgba(15, 23, 42, 0.9);
             border-top: 1px solid var(--border-color);
-            padding: 1.5rem 1rem;
+            padding: 2rem 1.5rem;
             text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-dim);
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
-        footer a {
-            color: var(--text-dim);
-            text-decoration: underline;
-            margin: 0 0.5rem;
-        }
-
-        footer a:hover {
-            color: var(--accent-color);
+        /* Adaptabilidad móvil */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            main { padding: 2rem 1rem; }
         }
     </style>
 </head>
@@ -162,27 +194,35 @@
 
     <header>
         <h1>DtW Studio</h1>
+        <p>Soluciones móviles de ingeniería y herramientas de desarrollo de alto nivel.</p>
     </header>
 
     <main>
         <h2 class="section-title">Nuestras Aplicaciones</h2>
+        
         <div class="apps-grid">
             
             <div class="app-card">
-                <h3>MRUV Física Fácil</h3>
-                <p>Resuelve problemas de Movimiento Rectilíneo Uniformemente Variado de forma rápida y sencilla. Incluye herramientas de cálculo vectorial en 3D.</p>
-                <div class="app-links">
-                    <a href="https://play.google.com/store/apps/details?id=com.dtw.mrua.calculator" target="_blank" class="btn btn-play-store">Ver en Google Play</a>
-                    <a href="mruv-privacy-policy.html" class="btn btn-secondary">Política de Privacidad</a>
+                <div class="app-header">
+                    <h3>MRU Física Fácil</h3>
+                    <span class="app-tech">v1.3.2 • Room DB</span>
+                    <p class="app-description">Calculadora interactiva especializada en Movimiento Rectilíneo Uniforme con generación automática de gráficas de posición y velocidad vs tiempo.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn btn-primary">Descargar en Google Play</a>
+                    <a href="privacy-policy.html" class="btn btn-secondary">Política de Privacidad</a>
                 </div>
             </div>
 
             <div class="app-card">
-                <h3>MRU Física Fácil</h3>
-                <p>Tu compañero ideal para comprender el Movimiento Rectilíneo Uniforme. Diseñado para estudiantes de física y cinemática.</p>
-                <div class="app-links">
-                    <a href="https://play.google.com/store/apps/details?id=com.dtw.mru.calculator" target="_blank" class="btn btn-play-store">Ver en Google Play</a>
-                    <a href="privacy-policy.html" class="btn btn-secondary">Política de Privacidad</a>
+                <div class="app-header">
+                    <h3>MRUA Calculator</h3>
+                    <span class="app-tech">Nueva • Firebase</span>
+                    <p class="app-description">Lleva la resolución de problemas de física al siguiente nivel analizando aceleraciones constantes y ecuaciones complejas de manera instantánea.</p>
+                </div>
+                <div class="card-actions">
+                    <a href="#" class="btn btn-primary">Descargar en Google Play</a>
+                    <a href="mrua-privacy-policy.html" class="btn btn-secondary">Política de Privacidad</a>
                 </div>
             </div>
 
@@ -190,11 +230,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 DtW Studio. Todos los derechos reservados.</p>
-        <p>
-            <a href="privacy-policy.html">Política de Privacidad General</a> | 
-            <a href="app-ads.txt" target="_blank">app-ads.txt</a>
-        </p>
+        <p>&copy; 2026 DtW Studio. Desarrollado con excelencia técnica.</p>
     </footer>
 
 </body>
