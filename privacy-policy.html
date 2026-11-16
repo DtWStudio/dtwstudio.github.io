@@ -45,6 +45,45 @@
             gap: 24px;
         }
 
+        /* Barra de Navegación Superior */
+        .top-nav {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 10px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+            transition: all 0.2s ease;
+        }
+
+        .home-btn:hover {
+            border-color: var(--brand-color);
+            color: var(--brand-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(30, 58, 138, 0.1);
+        }
+
+        .home-btn svg {
+            width: 17px;
+            height: 17px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
         /* Cabecera Estilo Premium */
         .hero-header {
             background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
@@ -189,11 +228,11 @@
         /* Botón de Contacto Destacado */
         .contact { 
             background: var(--accent-light); 
-            color: #b45309;
+            color: #b45309; 
             padding: 14px 20px; 
             border-radius: 10px; 
-            font-weight: 600;
-            display: inline-block;
+            font-weight: 600; 
+            display: inline-block; 
             margin-top: 16px;
             border: 1px solid #fef3c7;
             font-size: 0.95rem;
@@ -212,6 +251,17 @@
 </head>
 <body>
 <div class="wrapper">
+
+    <!-- BOTÓN HOME -->
+    <nav class="top-nav">
+        <a href="https://dtwstudio.github.io/index.html" class="home-btn" aria-label="Volver al inicio">
+            <svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Home
+        </a>
+    </nav>
 
     <!-- ENCABEZADO -->
     <header class="hero-header">
